@@ -1,0 +1,39 @@
+html {
+    font-size: 10px;
+}
+
+.only-slider {
+    width: 320px;
+    height: 370px;
+    background: pink;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+
+.only-slider>.img-box {
+    background: orange;
+    display: flex;
+    position: relative;
+}
+
+.only-slider>.img-box img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.only-slider>.img-box .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.only-slider>.img-box img:hover {
+    opacity: 1;
+}
+
+.only-slider>.text-box {
+    background: green;
+}

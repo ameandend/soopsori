@@ -1,0 +1,226 @@
+.only-you-wrap .title {
+    /* 제목줄에 여백 빼기  */
+    margin-bottom: 0;
+}
+
+.title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.only-tab-list {
+    display: flex;
+    gap: 10px;
+}
+
+
+.only-tab-list>li>a {
+    display: block;
+    padding: 16px 24px;
+    border: 1px solid var(--default);
+    border-radius: 30px;
+    font-size: 1.13rem;
+    color: var(--default);
+    font-weight: 500;
+}
+
+.only-tab-list li a:hover {
+    background: #ddd;
+}
+
+.only-tab-list>li.active a {
+    background: var(--default);
+    color: #fff;
+    font-weight: 600;
+}
+
+.only-slider-list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+
+
+}
+
+.only-slider-list>div {
+    position: relative;
+    /* border: 1px solid blue; */
+    padding-bottom: 2% 0;
+    border-radius: 40px 40px 0 40px;
+    overflow: hidden;
+    background: #fff;
+
+}
+
+
+
+.only-slider-list>div img {
+    /* 이미지랑 글씨가 다겹쳐서 img box가아니고 img크기지정*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.only-slider-list>div .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.only-slider-list>div .text-box {
+    position: absolute;
+    bottom: 50px;
+    /* 글자박스의 크기가 가운데 50%밖에 안되므로
+    긴글자에는 적절치않음 
+    left: 50%;
+    transform: translateX(-50%); */
+    font-size: 1.13rem;
+    /* background: rgba(255, 0, 0, 0.3); */
+    /* 가운데로 보내는 다른방법 */
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+}
+
+.only-slider-list>div .radius {
+    width: 75px;
+    height: 75px;
+    /* background: red; */
+    background: #fff;
+    border-radius: 40px 0 0 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* .only-slider-list>div .radius::before 부모생략가능 */
+.only-slider-list>div .radius::before {
+    content: "";
+    display: block;
+    /* background: green; */
+    background: transparent;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    left: -80px;
+    bottom: 0;
+    /* box-shadow: 40px 40px 0 yellow; */
+    box-shadow: 40px 40px 0 #fff;
+}
+
+.only-slider-list>div .radius::after {
+    content: "";
+    display: block;
+    /* background: hotpink; */
+    background: transparent;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: -80px;
+    /* box-shadow: 40px 40px 0 orange; */
+    box-shadow: 40px 40px 0 #fff;
+}
+
+.only-slider-list>div:hover .hover-img {
+    opacity: 1;
+}
+
+.only-slider-list>div:hover .text-box {
+    color: #fff;
+}
+
+.only-slider-list>div::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 100;
+    background: var(--default) url(../images/iconmonstr-arrow-right-thin.svg) no-repeat center center;
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+
+/* hover::after 띄어쓰지 말기 ㅠ */
+.only-slider-list>div:hover::after {
+    right: 0;
+    bottom: 0;
+}
+
+
+
+/* .only-slider-list>div:hover .radius {
+    background: var(--default);
+    z-index: 100;
+} */
+
+
+
+/* 스스로해보기*/
+
+
+
+/* .selection 자식들을 옆으로 붙이기 */
+.selection {
+    display: flex;
+}
+
+/* 자식들의 너비는 동일하기 */
+.selection>div {
+    width: 100%
+}
+
+/* .selection>div img 너비를 100% */
+.selection>div img {
+    width: 100%;
+}
+
+/* .sel-right 자식을 좌우, 위아래로 가운데로 보내기*/
+.sel-right {
+    display: flex;
+    /* flex상태에서 아래로 붙이기 */
+    flex-direction: column;
+    /* 방향이 바뀌어서 위아래 가운데 */
+    justify-content: center;
+    /* 방향이 바뀌어서 좌우 가운데 */
+    align-items: center;
+    gap: 40px;
+    padding-left: 75px;
+}
+
+.sel-right .text-box {
+    text-align: center;
+}
+
+/* 글자크기 32 */
+.sel-right .text-box strong {
+    font-size: 2rem;
+}
+
+
+/* 글자크기 18 */
+.sel-right .text-box p {
+    font-size: 1.13rem;
+    margin: 20px 0;
+}
+
+/* 글자크기 26 */
+.sel-right .text-box .more {
+    background: var(--default);
+    color: #fff;
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.5rem;
+    border-radius: 30px;
+}
