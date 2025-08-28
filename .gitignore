@@ -1,4 +1,23 @@
+# 환경 설정 파일
+.env
+config.json
+
+# 빌드 결과물
+dist/
+build/
+
+# 로그 파일
+*.log
+
+# 시스템 파일
 .DS_Store
 ._.DS_Store
 **/.DS_Store
 **/._.DS_Store
+Thumbs.db
+
+# 연습용 파일
+btn-test.css
+btn-test.html
+test.html
+css/only-myself.css
